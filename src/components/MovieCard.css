@@ -1,0 +1,49 @@
+.movie-card {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 250px; /* Ensure the card doesn't exceed the image width */
+}
+
+.movie-card img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 250px;
+  height: 300px;
+  object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+.movie-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.movie-card p {
+  font-size: 1rem;
+  word-wrap: break-word; /* Allows long URLs to wrap to the next line */
+  overflow-wrap: break-word; /* Additional property to ensure proper wrapping */
+  text-align: left; /* Aligns text to the left for better readability */
+  max-width: 250px; /* Ensures the text doesn't exceed the image width */
+  margin: 0 auto; /* Centers the paragraph within the card */
+  white-space: normal; /* Prevents the text from continuing on one line */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .movie-card {
+    margin: 10px;
+    max-width: 100%; /* Adjusts width for smaller screens */
+  }
+
+  .movie-card img {
+    width: 100%; /* Ensures the image is responsive */
+    height: auto;
+  }
+
+  .movie-card p {
+    max-width: 100%; /* Text width adjusts according to screen size */
+  }
+}

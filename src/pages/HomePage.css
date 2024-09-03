@@ -1,0 +1,27 @@
+.home-page {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.movie-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  width: 250px;
+  text-align: center;
+}
+
+.movie-item img {
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}

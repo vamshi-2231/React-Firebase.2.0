@@ -1,0 +1,122 @@
+.admin-page {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.admin-form {
+  margin-bottom: 20px;
+}
+
+.admin-form input {
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.admin-form button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-form button:hover {
+  background-color: #0056b3;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-item {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Ensures the card width matches the image width */
+  text-align: center;
+}
+
+.movie-item img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 250px;
+  height: 300px;
+  object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+.movie-item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.movie-item p {
+  font-size: 1rem;
+  word-wrap: break-word; /* Allows long URLs to wrap to the next line */
+  overflow-wrap: break-word; /* Additional property to ensure proper wrapping */
+  text-align: left; /* Aligns text to the left for better readability */
+  max-width: 250px; /* Ensures the text doesn't exceed the image width */
+  margin: 0 auto; /* Centers the paragraph within the card */
+  white-space: normal; /* Prevents the text from continuing on one line */
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.update-button,
+.delete-button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-button {
+  background-color: #28a745; /* Green color */
+  color: white;
+}
+
+.update-button:hover {
+  background-color: #218838;
+}
+
+.delete-button {
+  background-color: #dc3545; /* Red color */
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .admin-page {
+    padding: 10px;
+  }
+
+  .movie-item {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .movie-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .movie-item p {
+    max-width: 100%;
+  }
+}
