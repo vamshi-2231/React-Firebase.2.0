@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { db } from "../config/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import MovieCard from "../components/MovieCard";
-import Navbar from "../components/Navbar";
 import "./HomePage.css";
 
 function HomePage() {
@@ -29,7 +28,6 @@ function HomePage() {
 
   return (
     <div className="home-page">
-      <Navbar />
       <div className="movie-list">
         {movieList.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />

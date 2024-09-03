@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { auth } from "../config/firebase";
 import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+// import "./Auth.css"; // Ensure you include this CSS file for styling
 
-function Auth() {
+function Auth({ onSignIn, onSignOut }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -24,6 +25,7 @@ function Auth() {
       await signInWithEmailAndPassword(auth, email, password);
       setEmail("");
       setPassword("");
+      if (onSignIn) onSignIn();
     } catch (err) {
       setError("Failed to sign in. Please check your email and password.");
       console.error(err);
@@ -37,6 +39,7 @@ function Auth() {
     setError(null);
     try {
       await signOut(auth);
+      if (onSignOut) onSignOut();
     } catch (err) {
       setError("Failed to sign out.");
       console.error(err);
@@ -46,16 +49,17 @@ function Auth() {
   };
 
   return (
-    <div>
+    <div className="auth-card">
       {user ? (
         <div>
-          {/* <p>Welcome, {user.email}</p>  */}
-          <button onClick={handleSignOut} disabled={loading}>
+          <p className="welcome-message">Welcome, {user.email}</p>
+          <button className="sign-out-button" onClick={handleSignOut} disabled={loading}>
             {loading ? "Signing Out..." : "Sign Out"}
           </button>
         </div>
       ) : (
         <div>
+          <h2>Please LogIn to Manage</h2>
           <input
             type="email"
             placeholder="Email"
