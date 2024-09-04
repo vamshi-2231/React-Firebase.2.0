@@ -4,7 +4,7 @@ import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDRm_hY2_IYN5Uqm3ljES5vXkWxnyGshmo",
+    apiKey: process.env.REACT_APP_FIREBASE_KEY,
     authDomain: "project-35961.firebaseapp.com",
     databaseURL: "https://project-35961-default-rtdb.asia-southeast1.firebasedatabase.app",
     projectId: "project-35961",
