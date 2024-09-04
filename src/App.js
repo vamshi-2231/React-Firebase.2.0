@@ -1,19 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import AdminPage from "./pages/AdminPage";
-import ServicesPage from "./pages/ServicesPage";  // Import the Services page
-import AboutPage from "./pages/AboutPage";        // Import the About page
+import ServicesPage from "./pages/ServicesPage";
+import AboutPage from "./pages/AboutPage";
 import Navbar from "./components/Navbar";
 
 function App() {
+  
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />      {/* Default route for HomePage */}
         <Route path="/admin" element={<AdminPage />} />
-        <Route path="/services" element={<ServicesPage />} /> {/* Add Services route */}
-        <Route path="/about" element={<AboutPage />} />        {/* Add About route */}
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </Router>
   );
